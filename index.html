@@ -6,6 +6,9 @@
     <title>Drone Shot Studios</title>
     <link rel="icon" href="logo.png" type="image/png">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+
     <!-- Fuentes Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,7 +120,6 @@
         }
 
         /* Ejemplos */
-        /* Ejemplos */
         .examples .example-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -126,27 +128,27 @@
         }
 
         .examples img, .examples video {
-            width: 800px; /* Aumentamos el tamaño */
-            height: 533px; /* Ajustamos la altura proporcionalmente */
+            width: 100%; /* Cambiar a 100% para que se ajusten en pantallas pequeñas */
+            max-width: 800px; /* Limitar el tamaño máximo */
+            height: auto; /* Mantener la proporción */
             object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         /* Estilo para las descripciones */
         .examples .example-item {
-            text-align: center; /* Centra las imágenes/videos y las descripciones */
-            width: 80%; /* Controla el ancho de cada item */
+            text-align: center;
+            width: 100%;
             margin: 20px auto;
         }
 
         .examples .description {
             font-size: 1rem;
-            color: #555; /* Un gris suave */
+            color: #555;
             margin-top: 10px;
             font-style: italic;
         }
-
-
 
         /* Pie de página */
         footer {
@@ -154,6 +156,38 @@
             color: white;
             text-align: center;
             padding: 20px 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem; /* Reducir tamaño en pantallas pequeñas */
+            }
+
+            header p {
+                font-size: 1rem; /* Reducir tamaño en pantallas pequeñas */
+            }
+
+            .section {
+                padding: 20px 5%; /* Reducir el padding */
+            }
+
+            nav {
+                flex-direction: column; /* Poner los enlaces en columna */
+            }
+
+            nav a {
+                padding: 10px 15px; /* Reducir el padding de los enlaces */
+            }
+
+            .services .service-item, .examples .example-item {
+                width: 90%; /* Ajustar el ancho en pantallas pequeñas */
+            }
+
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+            }
         }
     </style>
 </head>
@@ -178,7 +212,7 @@
         <h2>Nuestros Servicios</h2>
         <div class="service-item">
             <h3>Fotografía Aérea</h3>
-            <p>Captura imágenes impactantes desde las alturas con calidad profesional. Fotografías normales y panorámicas para cualquier tipo de ambiente. Cámara de 12 Megapixeles, calidad 4K.</p>
+            <p>Captura imágenes impactantes desde las alturas con calidad profesional. Fotografías normales y panorámicas 360 para cualquier tipo de ambiente. Cámara de 12 Megapixeles, calidad 4K.</p>
         </div>
         <div class="service-item">
             <h3>Grabación de Video</h3>
@@ -221,23 +255,19 @@
             </div>
         </div>
     </section>
-    
 
     <!-- Sección de Contacto -->
     <section id="contact" class="section contact">
         <h2>Contáctanos</h2>
-        <p>El precio es totalmente negociable y accessible. Contáctanos para más detalles.</p>
-        <p>Email: <a href="mailto:leonardo.cedi@gmail.com">leonardo.cedi@gmail.com</a></p>
-        <p>Teléfono: +52 33 1062 2232</p>
-        <!-- Botón de WhatsApp -->
-        <a href="https://wa.link/xpi0cv" class="whatsapp-btn" target="_blank">
-            <img src="wasap.png" alt="WhatsApp">
+        <p>El precio es totalmente negociable y accesible. Contáctanos para más detalles.</p>
+        <a href="https://wa.link/xpi0cv" class="whatsapp-btn">
+            <img src="wasap.png" alt="WhatsApp Icon">
         </a>
     </section>
-
-    <!-- Pie de página -->
+    
+    <!-- Pie de Página -->
     <footer>
-        <p>&copy; 2024 Drone Shot Studios. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Drone Shot Studios</p>
     </footer>
 
 </body>
